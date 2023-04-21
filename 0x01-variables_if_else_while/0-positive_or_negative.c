@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main
+ * main - Entry point
  * Description: positive or negative C program
  *Return: Always 0 (Success)
  */
