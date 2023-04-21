@@ -2,7 +2,8 @@
 
 /**
  *main - print lowercase alpha a-z but remove 'q' and 'e'
- *Description: #include <stdio.h>
+ *Description: Write a program that prints the alphabet in lowercase
+ *Return: Always 0 (Success)
 */
 
 int main(void)
