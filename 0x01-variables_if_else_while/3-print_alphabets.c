@@ -2,7 +2,7 @@
 
 /**
  *main - print lowercase and uppercase a-zA-Z using putchar
- *Description: C program that prints the alphabet in lowercase, and then in uppercase,
+ *Description: Print the alphabet in lowercase, and then in uppercase,
  *Return: Always 0 (Success)
  */
 
