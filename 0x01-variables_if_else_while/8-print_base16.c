@@ -10,13 +10,13 @@ int main(void)
 
 	int a_f = 'a';
 
-	while (n <= '9') 
+	while (n <= '9')
 	{
 		putchar(n);
 		n++;
 	}
 
-	while (a_f <= 'f') 
+	while (a_f <= 'f')
 	{
 		putchar(a_f);
 		a_f++;
