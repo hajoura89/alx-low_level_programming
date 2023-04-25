@@ -11,9 +11,9 @@ void print_alphabet_x10(void)
 
 	alphabet = 'a';
 
-	int line =0;
+	int l =0;
 
-	while (line <= 9)
+	while (l <= 9)
 	{
 		while (alphabet <= 'z')
 		{
