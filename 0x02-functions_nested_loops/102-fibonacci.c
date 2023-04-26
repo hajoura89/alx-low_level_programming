@@ -8,21 +8,21 @@
 
 int main(void)
 {
-	int n;
-	int counter = 50;
-	long a = 1;
-	long b = 2;
+	long a = 0;
+	long b = 1;
+	int n = 0;
+	long fibonacci;
 
-	for (n = 1; n <= (counter / 2); n++)
+	while (n < 50)
 	{
-		printf("%li %li ", a, b);
-		a += b;
-		b += a;
+		fibonacci = b + a;
+		if (n != 49)
+			printf("%ld, ", fibonacci);
+		else
+			printf("%ld\n", fibonacci);
+		a = b;
+		b = fibonacci;
+		n += 1;
 	}
-	if (counter % 2 == 1)
-		printf("%li", a);
-
-	printf("\n");
-
 	return (0);
 }
