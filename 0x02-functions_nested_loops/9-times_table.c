@@ -28,7 +28,7 @@ void times_table(void)
 				_putchar ((product % 10) + '0');
 			}
 			if (multiplied != 9)
-				_putchar (',');
+				_putchar(',');
 		}
 		_putchar('\n');
 	}
