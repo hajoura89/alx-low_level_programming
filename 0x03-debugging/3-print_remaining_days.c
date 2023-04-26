@@ -7,14 +7,14 @@
  * @month: month in number format
  * @day: day of month
  * @year: year
- * Return: void
+ * Return: voidi
  */
 
 void print_remaining_days(int month, int day, int year)
 {
-	if (year % 4 == 0 || (year % 400 == 0 && !(year % 100 == 0)))
+	if ((year % 4 == 0) || (year % 400 == 0 && year % 100 == 0))
 	{
-		if (month >= 2)
+		if (month >= 2 && day >= 60)
 		{
 			day++;
 		}
