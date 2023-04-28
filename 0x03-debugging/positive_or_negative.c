@@ -3,15 +3,13 @@
 #include <stdio.h>
 
 /**
- *positive_or_negative - Entry point
- *Description: positive or negative C program
- *@i: Parameter
+ * positive_or_negative - Entry point
+ * Description: positive or negative C program
+ * @i: param
  *Return: Always 0 (Success)
-*/
+ */
 void positive_or_negative(int i)
 {
-	srand(time(0));
-	i = rand() - RAND_MAX / 2;
 	if (i > 0)
 	{
 		printf("%i is positive\n", i);
