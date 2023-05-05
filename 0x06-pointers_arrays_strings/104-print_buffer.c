@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * isPrintableASCII: to determine if ch is a printable ASCII char
+ * isPrintableASCII- to determine if ch is a printable ASCII char
  * @ch: param
  * Return: 1 if true, 0 if false
 */
@@ -11,7 +11,7 @@ int isPrintableASCII(int ch)
 }
 
 /**
- * printHexes: to print hex value for ch string in a formatted form
+ * printHexes- to print hex value for ch string in a formatted form
  * @ch: the string param to print
  * @begin : the starting position
  * @end: the ending position
@@ -33,7 +33,7 @@ void printHexes(char *ch, int begin, int end)
 }
 
 /**
- * printASCII: to print ASCII value for ch string
+ * printASCII- to print ASCII value for ch string
  * formatted to replace nonprintable chars with "."
  * @ch: string to print
  * @begin: the starting position
@@ -54,7 +54,7 @@ void printASCII(char *ch, int begin, int end)
 }
 
 /**
- * print_buffer - a function that prints a buffer
+ * print_buffer- a function that prints a buffer
  * @b: buffer to print
  * @size: size of the buffer
  * Return: void
