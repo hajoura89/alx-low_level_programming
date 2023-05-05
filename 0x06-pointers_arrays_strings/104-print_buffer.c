@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * isPrintableASCII: to determine if ch is a printable ASCII char
  * @ch: param
