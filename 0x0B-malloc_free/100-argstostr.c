@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-  *newstrstostr - concatenates all newstruments of the program.
-  *@ac: newstrument count.
+  *argstostr - concatenates all arguments of the program.
+  *@ac: argument count.
   *@av: pointer to array of size ac.
-  *Return: NULL if ac == 0 or av == null,
-  *Pointer to new string or NULL if it fails.
+  *Return: NULL if ac == 0 or av == null, Pointer to new string.
+  *NULL on fail.
   */
 char *argstostr(int ac, char **av)
 {
@@ -13,13 +13,13 @@ char *argstostr(int ac, char **av)
 	char *newstr;
 
 	size = 0;
-	i = 0;
-	j = 0;
 	k = 0;
 	if (ac == 0 || av == NULL)
 		return (NULL);
+	i = 0;
 	while (i < ac)
 	{
+		j = 0;
 		while (av[i][j])
 		{
 			size++;
@@ -31,8 +31,10 @@ char *argstostr(int ac, char **av)
 	newstr = malloc((sizeof(char) * size) + 1);
 	if (newstr == NULL)
 		return (NULL);
+	i = 0;
 	while (i < ac)
 	{
+		j = 0;
 		while (av[i][j])
 		{
 			newstr[k] = av[i][j];
