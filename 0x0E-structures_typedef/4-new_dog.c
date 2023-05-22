@@ -14,67 +14,64 @@ char *_strcpy(char *dest, char *src);
   */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *max_dog;
-	int name_l = 0, own_l = 0;
+	dog_t *dog;
 
 	if (name != NULL && owner != NULL)
 	{
-		name_l = _strlen(name) + 1;
-		own_l = _strlen(owner) + 1;
-		max_dog = malloc(sizeof(dog_t));
+		dog = malloc(sizeof(dog_t));
 
-		if (max_dog == NULL)
+		if (dog == NULL)
 			return (NULL);
 
-		max_dog->name = malloc(sizeof(char) * name_l);
+		dog->name = malloc(sizeof(char) * _strlen(name) + 1);
 
-		if (max_dog->name == NULL)
+		if (dog->name == NULL)
 		{
-			free(max_dog);
+			free(dog);
 			return (NULL);
 		}
 
-		max_dog->owner = malloc(sizeof(char) * own_l);
+		dog->owner = malloc(sizeof(char) * _strlen(owner) + 1);
 
-		if (max_dog->owner == NULL)
+		if (dog->owner == NULL)
 		{
-			free(max_dog->name);
-			free(max_dog);
+			free(dog->name);
+			free(dog);
 			return (NULL);
 		}
 
-		max_dog->name = _strcpy(max_dog->name, name);
-		max_dog->owner = _strcpy(max_dog->owner, owner);
-		max_dog->age = age;
+		dog->name = _strcpy(dog->name, name);
+		dog->owner = _strcpy(dog->owner, owner);
+		dog->age = age;
 	}
 
-	return (max_dog);
+	return (dog);
 }
 
 /**
   * _strlen - Returns the length of a string
-  * @s: String to count
+  * @s: String to get the  length of
   *
-  * Return: String length
+  * Return: length of  the  string
   */
-int _strlen(char *s)
+int _strlen(char *str)
 {
-	int c = 0;
+	int len = 0;
 
-	for (; *s != '\0'; s++)
+	for (; *str != '\0'; str++)
 	{
-		c++;
+		len++;
 	}
 
-	return (c);
+	return (len);
 }
 
 /**
   * _strcpy - Copy a string
-  * @dest: Destination value
-  * @src: Source value
+  * @dest: destination
+  * @src: source
   *
-  * Return: the pointer to dest
+  * Return: the pointer to destination
   */
 char *_strcpy(char *dest, char *src)
 {
