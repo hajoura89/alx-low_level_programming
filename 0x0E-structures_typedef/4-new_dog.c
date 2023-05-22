@@ -1,9 +1,6 @@
 #include <stdlib.h>
 #include "dog.h"
 
-int _strlen(char *s);
-char *_strcpy(char *dest, char *src);
-
 /**
   * new_dog - a function that creates a new dog
   * @name: dog's name
@@ -50,7 +47,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 /**
   * _strlen - Returns the length of a string
-  * @s: String to get the  length of
+  * @str: String to get the  length of
   *
   * Return: length of  the  string
   */
