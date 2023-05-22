@@ -16,7 +16,7 @@ int _strlen(char *str)
 	return (len);
 }
 /**
-* _strcpy - To copy a string
+* *_strcpy - To copy a string
 * @dest: Destination
 * @src: Source
 * Return: the pointer to dest
@@ -35,7 +35,7 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
-* new_dog - a function that creates a new dog
+* *new_dog - a function that creates a new dog
 * @name: dog's name
 * @age: dog's  age
 * @owner: dog's owner
