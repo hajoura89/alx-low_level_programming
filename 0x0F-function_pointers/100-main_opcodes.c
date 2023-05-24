@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	}
 
 	while (byte--)
-		printf("%02hhx%s", *array++, byte ? ""  : "\n");
+		printf("%02hhx%s", *array++, byte ? " " : "\n");
 
 	return (0);
 }
