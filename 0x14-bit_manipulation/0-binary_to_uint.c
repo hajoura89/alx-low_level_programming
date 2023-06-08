@@ -6,28 +6,16 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int sum, mult;
-	int i;
+	unsigned int sum = 0;
 
 	if (b == NULL)
 		return (0);
 
-	for (i = 0; b[i]; i++)
+	while (*b)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (*b != '0' && *b != '1')
 			return (0);
-	}
-
-	mult = 1;
-	sum = 0;
-
-	for (i = i - 1; i >= 0; i--)
-	{
-		if (b[i] == '1')
-		{
-			sum += mult;
-		}
-		mult *= 2;
+		sum = sum * 2 + (*b++ - '0');
 	}
 
 	return (sum);
