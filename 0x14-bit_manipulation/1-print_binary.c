@@ -8,24 +8,24 @@
 void print_binary(unsigned long int n)
 {
 	int shift = 0;
-    unsigned long int num = n;
+	unsigned long int num = n;
 
 	if (n == 0)
-    {
-        printf("0");
-        return;
-    }
+	{
+		printf("0");
+		return;
+	}
 
-    while ((num >>= 1) > 0)
-    {
-        shift++;
-    }
+	while ((num >>= 1) > 0)
+	{
+		shift++;
+	}
 
-    for (; shift >= 0; shift--)
-    {
-        if ((n >> shift) & 1)
-            printf("1");
-        else
-            printf("0");
-    }
+	for (; shift >= 0; shift--)
+	{
+		if ((n >> shift) & 1)
+			printf("1");
+		else
+			printf("0");
+	}
 }
