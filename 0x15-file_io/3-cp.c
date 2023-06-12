@@ -2,9 +2,9 @@
 
 /**
  * main - main file that copy file
- * @argc: arguments input.
- * @argv: pointers arguments. 
- * Return: return 0 if all ok.
+ * @argc: arguments input
+ * @argv: pointers arguments
+ * Return: return 0 if all ok
  */
 int main(int argc, char *argv[])
 {
