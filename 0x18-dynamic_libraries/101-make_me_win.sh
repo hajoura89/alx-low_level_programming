@@ -1,2 +1,3 @@
 #!/bin/bash
-export LD_PRELOAD=/tmp/libtest.so
+
+export LD_PRELOAD=/tmp/nrandom.so
