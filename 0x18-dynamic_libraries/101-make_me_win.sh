@@ -1,2 +1,2 @@
 #!/bin/bash
-LD_PRELOAD=/$PWD/libtest.so
+LD_PRELOAD=/tmp/libtest.so
