@@ -11,38 +11,38 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t jmp, id, old_id;
+	size_t jump, index, old_id;
 	listint_t *tmp;
 
-	jmp = (size_t)sqrt(size);
+	jump = (size_t)sqrt(size);
 	if (!list)
 		return (NULL);
 	tmp = list;
-	for (id = jmp; id < size - 1 + jmp; id += jmp)
+	for (index = jump; index < size - 1 + jump; index += jump)
 	{
-		old_id = id;
-		if (id >= size)
+		old_id = index;
+		if (index >= size)
 		{
-			old_id = id;
-			id = size - 1;
+			old_id = index;
+			index = size - 1;
 		}
-		while (tmp && tmp->index != id)
+		while (tmp && tmp->index != index)
 		{
 			tmp = tmp->next;
 		}
-		printf("Value checked at id [%ld] = [%d]\n", tmp->index, tmp->n);
-		if (value <= tmp->n || id == size - 1)
+		printf("Value checked at index [%ld] = [%d]\n", tmp->index, tmp->n);
+		if (value <= tmp->n || index == size - 1)
 		{
-			printf("Value found between ides [%ld] and [%ld]\n",
-					old_id - jmp, id);
+			printf("Value found between indexes [%ld] and [%ld]\n",
+					old_id - jump, index);
 			tmp = list;
-			while (tmp && tmp->index != old_id - jmp)
+			while (tmp && tmp->index != old_id - jump)
 			{
 				tmp = tmp->next;
 			}
-			while (tmp && tmp->index <= id)
+			while (tmp && tmp->index <= index)
 			{
-				printf("Value checked at id [%ld] = [%d]\n", tmp->index, tmp->n);
+				printf("Value checked at index [%ld] = [%d]\n", tmp->index, tmp->n);
 				if (value == tmp->n)
 					return (tmp);
 				tmp = tmp->next;
